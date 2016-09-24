@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wzy.passwordmanager">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".app.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".mvp.ui.activity.LockActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.ui.activity.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mvp.ui.activity.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mvp.ui.activity.AddActivity"
+            android:label="@string/add_title"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mvp.ui.activity.IconsActivity"
+            android:label="@string/title_choose_icon"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mvp.ui.activity.MainActivity"
+            android:launchMode="singleTop"
+             />
+    </application>
+
+</manifest>

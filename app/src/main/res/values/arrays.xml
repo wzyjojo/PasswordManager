@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="types">
+        <item>其他</item>
+        <item>购物</item>
+        <item>社交</item>
+        <item>游戏</item>
+        <item>论坛</item>
+        <item>生活</item>
+    </string-array>
+</resources>

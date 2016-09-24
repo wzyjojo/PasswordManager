@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="account"
+            type="com.wzy.pdmanager.AccountInfo">
+
+        </variable>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/root_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="?colorPrimaryDark"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="?actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+            <ImageView
+                android:id="@+id/iv_select"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_add_icon"
+                android:padding="8.0dip"
+                android:src="@mipmap/ic_add_white" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8.0dip"
+                android:gravity="center"
+                android:text="@string/ico_tip"
+                android:textColor="@android:color/white"
+                android:textSize="14.0sp" />
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30.0dp"
+                android:layout_marginEnd="30.0dp"
+                android:layout_marginTop="8.0dip"
+                android:hint="@string/edt_hint_title"
+                android:text="@{account.title}"
+                android:maxLines="1"
+                android:textSize="14.0sp"
+                app:met_baseColor="@android:color/white"
+                app:met_clearButton="true"
+                app:met_errorColor="@color/md_red_500"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="@string/edt_hint_title"
+                app:met_primaryColor="?colorAccent" />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30.0dp"
+                android:layout_marginRight="30.0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/add_tv_type"
+                    android:textColor="@android:color/white"
+                    android:textSize="14.0sp" />
+
+                <Spinner
+                    android:id="@+id/sp_type"
+                    style="@style/Widget.MyLight.Spinner"
+                    android:layout_width="100dp"
+                    android:layout_height="50.0dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light" />
+            </LinearLayout>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edt_account"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30.0dp"
+                android:layout_marginRight="30.0dp"
+                android:hint="@string/edt_hint_account"
+                android:text="@{account.account}"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textSize="14.0sp"
+                app:met_baseColor="@android:color/white"
+                app:met_clearButton="true"
+                app:met_errorColor="@color/md_red_500"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="@string/edt_hint_account"
+                app:met_primaryColor="?colorAccent" />
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edt_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30.0dp"
+                android:layout_marginRight="30.0dp"
+                android:hint="@string/edt_hint_password"
+                android:text="@{account.password}"
+                android:singleLine="true"
+                android:textSize="14.0sp"
+                app:met_baseColor="@android:color/white"
+                app:met_clearButton="true"
+                app:met_errorColor="@color/md_red_500"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="@string/edt_hint_password"
+                app:met_primaryColor="?colorAccent" />
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edt_note"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30.0dp"
+                android:layout_marginRight="30.0dp"
+                android:hint="@string/edt_hint_note"
+                android:text="@{account.note}"
+                android:textSize="14.0sp"
+                app:met_baseColor="@android:color/white"
+                app:met_clearButton="true"
+                app:met_errorColor="@color/md_red_500"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="@string/edt_hint_note"
+                app:met_primaryColor="?colorAccent" />
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20.0dip"
+                android:layout_marginTop="20.0dip">
+
+                <Button
+                    android:id="@+id/btn_generate_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16.0dip"
+                    android:background="?selectableItemBackground"
+                    android:text="@string/btn_generate_pwd"
+                    android:textColor="@android:color/white"
+                    android:textSize="18.0sp" />
+
+                <ImageView
+                    android:id="@+id/iv_help"
+                    android:layout_width="35.0dip"
+                    android:layout_height="35.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8.0dip"
+                    android:layout_toRightOf="@id/btn_generate_pwd"
+                    android:background="?selectableItemBackground"
+                    android:padding="8.0dip"
+                    android:src="@drawable/ic_help_white_24dp" />
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="?selectableItemBackground"
+                    android:text="@string/btn_ok"
+                    android:textColor="@android:color/white"
+                    android:textSize="18.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
